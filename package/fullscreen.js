@@ -117,4 +117,8 @@
 
     // Initialize when the page content has loaded
     new MutationObserver(run).observe(qs('.pz-game-field'), { childList: true });
+    if (qs('.pz-game-field').childNodes[0].tagName == "MAIN") { // game field was already loaded
+        console.log("Game field already loaded; calling run")
+        run();
+    }
 })();
