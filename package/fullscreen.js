@@ -1,12 +1,13 @@
 (function() {    
 
-    // from https://github.com/ryanodd/nyt-pencil-extension
-    console.log("hello");
     function togglePencilButton() {
-        console.log("toggling pencil");
-        const pencilButtonIcon = document.querySelector(".xwd__toolbar_icon--pencil, .xwd__toolbar_icon--pencil-active");
-        const pencilButton = pencilButtonIcon.closest("button");
-        pencilButton.click();
+        // from https://github.com/ryanodd/nyt-pencil-extension
+        document.querySelector(".xwd__toolbar_icon--pencil, .xwd__toolbar_icon--pencil-active")?.closest("button").click();
+    }
+    function togglePause() {
+        const resumeButton = document.querySelector(".pz-moment__button")?.closest("button");
+        if (resumeButton) resumeButton.click();
+        else document.querySelector(".pz-icon-pause").closest("button").click();
     }
 
     let qs = s => document.querySelector(s);
@@ -18,6 +19,7 @@
         try {
             window.addEventListener("keydown", (event) => {
                 if (event.code === "ShiftLeft") togglePencilButton();
+                if (event.code === "ShiftRight") togglePause();
             });
         } catch (error) {
             console.error("Content-script error:", error);
