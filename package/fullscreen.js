@@ -120,7 +120,7 @@
         
         let addBtn = () => {
             qs('.xwd__modal--content')
-                .appendChild(fullbtn.cloneNode(true))
+                ?.appendChild(fullbtn.cloneNode(true))
                 .querySelector('button').addEventListener('click', toggleFullscreen);
         };
 
