@@ -19,7 +19,7 @@
         try {
             window.addEventListener("keydown", (event) => {
                 if (event.code === "ShiftLeft") togglePencilButton();
-                if (event.code === "ShiftRight") togglePause();
+                if (event.altKey && event.code === "Space") togglePause();
             });
         } catch (error) {
             console.error("Content-script error:", error);

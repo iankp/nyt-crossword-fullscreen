@@ -2,6 +2,12 @@
 
 Adds a full-screen mode button to the New York Times crossword puzzle interface.
 
+Adds the following keyboard shortcuts:
+| Shortcut | Description |
+| -- | -- |
+| `left shift` | Toggle pencil |
+| `alt`+`space` | Toggle pause |
+
 Firefox Add-On: [[link]](https://addons.mozilla.org/en-US/firefox/addon/nyt-crossword-fullscreen/)  
 Chrome/Edge Extension: [[link]](https://chrome.google.com/webstore/detail/nyt-crossword-fullscreen/lpnihcgnplcjdlfmdlejbpcnehidmfon)
 
