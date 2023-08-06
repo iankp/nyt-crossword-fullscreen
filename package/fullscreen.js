@@ -1,10 +1,29 @@
 (function() {    
+
+    // from https://github.com/ryanodd/nyt-pencil-extension
+    console.log("hello");
+    function togglePencilButton() {
+        console.log("toggling pencil");
+        const pencilButtonIcon = document.querySelector(".xwd__toolbar_icon--pencil, .xwd__toolbar_icon--pencil-active");
+        const pencilButton = pencilButtonIcon.closest("button");
+        pencilButton.click();
+    }
+
     let qs = s => document.querySelector(s);
     let run = () => {
         if (window.hasRun) return; // Ensure this code only runs once
         window.hasRun = true;
-    
-            // DOM elements
+
+        // from https://github.com/ryanodd/nyt-pencil-extension
+        try {
+            window.addEventListener("keydown", (event) => {
+                if (event.code === "ShiftLeft") togglePencilButton();
+            });
+        } catch (error) {
+            console.error("Content-script error:", error);
+        }
+
+        // DOM elements
         let container = qs('.pz-content'),
             game = qs('#crossword-container'),
 
