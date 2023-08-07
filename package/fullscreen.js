@@ -1,7 +1,7 @@
 (function() {    
 
     function togglePencilButton() {
-        // from https://github.com/ryanodd/nyt-pencil-extension
+        // adapted from https://github.com/ryanodd/nyt-pencil-extension
         document.querySelector(".xwd__toolbar_icon--pencil, .xwd__toolbar_icon--pencil-active")?.closest("button").click();
     }
     function togglePause() {
@@ -15,7 +15,7 @@
         if (window.hasRun) return; // Ensure this code only runs once
         window.hasRun = true;
 
-        // from https://github.com/ryanodd/nyt-pencil-extension
+        // adapted from https://github.com/ryanodd/nyt-pencil-extension
         try {
             window.addEventListener("keydown", (event) => {
                 if (event.altKey && !event.shiftKey && !event.ctrlKey && event.code === "Space") togglePause();
