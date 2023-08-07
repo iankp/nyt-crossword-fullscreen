@@ -18,8 +18,13 @@
         // from https://github.com/ryanodd/nyt-pencil-extension
         try {
             window.addEventListener("keydown", (event) => {
-                if (event.code === "ShiftLeft") togglePencilButton();
-                if (event.altKey && event.code === "Space") togglePause();
+                if (event.altKey && !event.shiftKey && !event.ctrlKey && event.code === "Space") togglePause();
+                if (event.code === "ShiftLeft") window.shiftPressed = true;
+                else window.shiftPressed = false;
+            });
+            window.addEventListener("keyup", (event) => {
+                if (event.code === "ShiftLeft" && window.shiftPressed) togglePencilButton();
+                window.shiftPressed = false;
             });
         } catch (error) {
             console.error("Content-script error:", error);
