@@ -11,7 +11,21 @@ Adds the following keyboard shortcuts:
 Firefox Add-On: [[link]](https://addons.mozilla.org/en-US/firefox/addon/nyt-crossword-fullscreen/)  
 Chrome/Edge Extension: [[link]](https://chrome.google.com/webstore/detail/nyt-crossword-fullscreen/lpnihcgnplcjdlfmdlejbpcnehidmfon)
 
+## Installation Instructions
+### Firefox: As Temporary Add In
+Copy `manifest.v3.json` to `package/manifest.json`; you can then load that as a
+[temporary extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
+
+Regular Firefox doesn't permit permanently loading non-signed extensions ([see
+here](https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox)).
+
 ## Changelog
+
+### iankp/nyt-crossword-fullscreen fixes
+- Fixed a bug where the extension would not execute if loaded after the page
+- Added feature to toggle pencil status
+- Added feature to toggle pause status
+- Removed feature that disabled tooltip on the board (was broken; no `#boardTitle`)
 
 ### 1.7
 
