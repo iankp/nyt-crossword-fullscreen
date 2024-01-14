@@ -101,9 +101,6 @@
         toolbar.maxWidth = 'unset';
         toolbar.padding = '0 calc((100% - 1280px)/2)';
 
-        // Get rid of the tooltip on the grid
-        qs('#boardTitle').innerHTML = '';
-
         // Re-render on window resize
         window.onresize = render;
 
