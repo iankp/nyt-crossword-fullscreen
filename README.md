@@ -6,7 +6,7 @@ Adds the following keyboard shortcuts:
 | Shortcut | Description |
 | -- | -- |
 | `left shift` | Toggle pencil |
-| `alt`+`space` | Toggle pause |
+| `ctrl`+`left shift` | Toggle pause |
 
 Firefox Add-On: [[link]](https://addons.mozilla.org/en-US/firefox/addon/nyt-crossword-fullscreen/)  
 Chrome/Edge Extension: [[link]](https://chrome.google.com/webstore/detail/nyt-crossword-fullscreen/lpnihcgnplcjdlfmdlejbpcnehidmfon)
@@ -25,7 +25,11 @@ here](https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox)).
 - Fixed a bug where the extension would not execute if loaded after the page
 - Added feature to toggle pencil status
 - Added feature to toggle pause status
-- Removed feature that disabled tooltip on the board (was broken; no `#boardTitle`)
+  - right now this is assigned to `ctrl` + `ShiftLeft`; a better shortcut could
+    be selected, but it would need to be made to work cross platform and be
+    layout-agnostic
+- Removed feature that disabled tooltip on the board (was broken; no
+  `#boardTitle`)
 
 ### 1.7
 

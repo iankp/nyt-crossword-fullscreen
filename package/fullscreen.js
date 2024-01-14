@@ -18,7 +18,7 @@
         // adapted from https://github.com/ryanodd/nyt-pencil-extension
         try {
             window.addEventListener("keydown", (event) => {
-                if (event.altKey && !event.shiftKey && !event.ctrlKey && event.code === "Space") togglePause();
+                if (!event.altKey && event.shiftKey && event.ctrlKey && event.code === "ShiftLeft") togglePause();
                 if (event.code === "ShiftLeft") window.shiftPressed = true;
                 else window.shiftPressed = false;
             });
