@@ -23,7 +23,7 @@
                 else window.shiftPressed = false;
             });
             window.addEventListener("keyup", (event) => {
-                if (event.code === "ShiftLeft" && window.shiftPressed) togglePencilButton();
+                if (!event.altKey && !event.ctrlKey && event.code === "ShiftLeft" && window.shiftPressed) togglePencilButton();
                 window.shiftPressed = false;
             });
         } catch (error) {
